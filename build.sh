@@ -3,8 +3,6 @@ Misskey=2026.3.2
 rm -rf ./temp && mkdir ./temp && cd ./temp
 git clone https://github.com/misskey-dev/misskey.git misskey-${Misskey}
 cd misskey-${Misskey} && git checkout ${Misskey} && git submodule update --init
-sed -i "s|_light|l-rainy|" ./packages/frontend/src/theme.ts
-sed -i "s|_dark|d-future|" ./packages/frontend/src/theme.ts
 sed -i "s/86b300/5db0da/g" ./packages/backend/src/server/web/manifest.json ./packages/backend/src/server/web/views/base.tsx ./packages/backend/src/core/EmailService.ts
 sed -i "s|google\.com|bing.com|" ./packages/frontend/src/components/MkGoogle.vue
 cp -f ../../icon/256.png ./packages/backend/assets/apple-touch-icon.png
