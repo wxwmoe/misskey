@@ -1,5 +1,5 @@
 #!/bin/sh
-Misskey=2026.3.2
+Misskey=2026.7.0
 rm -rf ./temp && mkdir ./temp && cd ./temp
 git clone https://github.com/misskey-dev/misskey.git misskey-${Misskey}
 cd misskey-${Misskey} && git checkout ${Misskey} && git submodule update --init
